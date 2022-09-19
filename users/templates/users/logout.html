@@ -1,0 +1,8 @@
+{% extends "task/root.html "%} {% block content %} {% load crispy_forms_tags %}
+<div>
+  <h1 class="my-4 fw-bold">You Have been log out</h1>
+  <div class="form-group my-3">
+    <small class="form-text text-muted"> Wants to login again ? <a class="mx-1 text-decoration-none" href="{% url 'login' %}">Sign In</a> </small>
+  </div>
+</div>
+{% endblock content%}
