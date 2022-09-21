@@ -12,7 +12,7 @@
   <form  method="POST" class="m-4 p-4 shadow-lg rounded" enctype="multipart/form-data">
     {% csrf_token %}
     <fieldset class="form-group my-1 mx-2">
-      <legend class="fw-bold my-3">Edit Form</legend>
+      <legend class="fw-bold my-3">Update Form</legend>
       {{ UserEdit|crispy }} {{ ProfileEdit|crispy }}
     </fieldset>
     <div class="form-group my-4">

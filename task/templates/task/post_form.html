@@ -1,0 +1,14 @@
+{% extends "task/root.html "%} {% block content %} {% load crispy_forms_tags %}
+<div>
+  <form method="POST" class="m-4">
+    {% csrf_token %}
+    <fieldset class="form-group my-3">
+      <legend class="fw-bold display-6 my-5">New Post</legend>
+      {{ form|crispy }}
+    </fieldset>
+    <div class="form-group my-3">
+      <button class="btn btn-dark px-5" type="submit">Create</button>
+    </div>
+  </form>
+</div>
+{% endblock content%}

@@ -1,0 +1,30 @@
+{% extends "task/root.html" %} {% block content%}
+<article>
+  <h1 class="m-5 fw-bold">{{users.name}}</h1>
+  <section class="d-flex p-2 m-4 shadow-lg rounded align-items-center">
+    <div class="m-4 p-2">
+      <img class="profile-pics shadow-lg rounded-circle m-4" src="{{object.client.profile.pic.url}}" />
+    </div>
+    <div class="m-4 p-2">
+      <div class="d-flex m-2 p-2">
+        <h6 class="fw-bold px-2">Name of the User:</h6>
+        <h6>{{object.name}}</h6>
+      </div>
+      <div class="d-flex m-2 p-2">
+        <h6 class="fw-bold px-2">Password:</h6>
+        <h6>{{object.password}}</h6>
+      </div>
+    </div>
+    <div class="m-4 p-2">
+      <div class="d-flex m-2 p-2">
+        <h6 class="fw-bold px-2">Date of Birth:</h6>
+        <h6>{{object.dob|date:"F Y, d"}}</h6>
+      </div>
+      <div class="d-flex m-2 p-2">
+        <h6 class="fw-bold px-2">Client Name:</h6>
+        <h6>{{object.client}}</h6>
+      </div>
+    </div>
+  </section>
+</article>
+{% endblock content%}
