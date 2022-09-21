@@ -11,6 +11,24 @@
     <title>Home Task</title>
     {% endif %}
   </head>
+  <style>
+    input {
+      margin: 12px 0px;
+    }
+    label {
+      font-weight: 500;
+    }
+    .profile-pics {
+      height: 140px;
+      width: 140px;
+      object-fit: cover;
+    }
+    .profile-pics-post {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+    }
+  </style>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark px-5 py-3">
       <div class="container">
@@ -27,7 +45,7 @@
               <a class="nav-link text-light" href="{% url 'task-about' %}">About</a>
             </li>
             {% if user.is_authenticated %}
-             <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link text-light" href="{% url 'profile' %}">Profile</a>
             </li>
             <li class="nav-item">
