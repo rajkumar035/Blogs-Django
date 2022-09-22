@@ -7,6 +7,7 @@
     <div class="mx-3">
       <h1 class="my-3 fw-bold">{{ user.username }}</h1>
       <h6 class="my-3 text-muted">{{ user.email }}</h6>
+      <a class="btn btn-success px-4 py-1 my-2" href="{% url 'post-create' %}">+ Add Post</a>
     </div>
   </div>
   <form  method="POST" class="m-4 p-4 shadow-lg rounded" enctype="multipart/form-data">

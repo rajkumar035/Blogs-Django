@@ -1,0 +1,15 @@
+{% extends "task/root.html "%} {% block content %}
+<div>
+  <form method="POST" class="m-4">
+    {% csrf_token %}
+    <fieldset class="form-group my-3">
+      <legend class="fw-bold display-6 my-5">Delete Post</legend>
+      <h6>Are you sure, You want to delete {{object.name}} post ?</h6>
+    </fieldset>
+    <div class="form-group my-3 d-flex justify-content-between">
+      <button class="btn btn-danger px-5" type="submit">Yes, Delete !</button>
+      <a class="btn btn-secondary px-5" href="{% url 'post-det' object.id %}">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock content%}

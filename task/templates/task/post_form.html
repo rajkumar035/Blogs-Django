@@ -3,11 +3,12 @@
   <form method="POST" class="m-4">
     {% csrf_token %}
     <fieldset class="form-group my-3">
-      <legend class="fw-bold display-6 my-5">New Post</legend>
+      <legend class="fw-bold display-6 my-5">Post Any</legend>
       {{ form|crispy }}
     </fieldset>
-    <div class="form-group my-3">
-      <button class="btn btn-dark px-5" type="submit">Post</button>
+    <div class="form-group my-3 d-flex justify-content-between">
+      <button class="btn btn-success px-5" type="submit">Post</button>
+      <a class="btn btn-secondary px-5" href="/">Cancel</a>
     </div>
   </form>
 </div>
